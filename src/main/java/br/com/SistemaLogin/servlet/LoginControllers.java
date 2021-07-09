@@ -66,14 +66,16 @@ public class LoginControllers extends HttpServlet {
 			
 			// o .equals e a forma de dizer igual dentro do java
 			//.trim() ignora os espaços
-			 if(!nomeUsuario.trim().equals("hugo") || !senhaUsuario.trim().equals("123")) {	
+			 if(!nomeUsuario.trim().equals("hugo") || !senhaUsuario.trim().equals("123")) 	
 				
-				throw new	 InvalidUserException("Usuario ou senha incorreto, tente novamente!!");
+				throw new InvalidUserException("Usuario ou senha incorreto, tente novamente!!");
 				
 				HttpSession session = req.getSession(); 
 				session.setAttribute("usuarioautenticado", nomeUsuario);
 				
-			}
+			
+			 
+			 
 		
 	}
 

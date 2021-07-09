@@ -10,9 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-
 import br.com.SistemaLogin.exception.InvalidUserException;
-import br.com.SistemaLogin.exception.InvalidUserExeption;
 
 /**
  * Servlet implementation class LoginControllers

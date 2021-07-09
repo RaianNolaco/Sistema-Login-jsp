@@ -17,7 +17,7 @@
   
   	<exception-type>
   	
-  		br.com.SistemaLogin.exception.InvalidUserExeption
+  		br.com.SistemaLogin.exception.InvalidUserException
   		
   	</exception-type>
   

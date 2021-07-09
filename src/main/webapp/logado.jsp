@@ -21,6 +21,8 @@
 	
 	%>
 	
+	teste commit
+	
 	<p>Seja bem vindo <%=nomeUsuario%></p> | 
 	<a href = "remover.jsp">sair</a>
 	

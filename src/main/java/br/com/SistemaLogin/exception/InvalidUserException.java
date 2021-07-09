@@ -1,9 +1,9 @@
 package br.com.SistemaLogin.exception;
 import javax.servlet.ServletException;
 
-public class InvalidUserExeption extends ServletException{
+public class InvalidUserException extends ServletException{
 	
-	public InvalidUserExeption(String message){
+	public InvalidUserException(String message){
 		super(message);
 		
 	}

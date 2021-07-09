@@ -11,7 +11,7 @@
 
 	<h2>Login efetuado com sucesso!</h2>
 	
-	<% String nomeUsuario= (String) session.getAttribute("usuarioautenticado");
+	<% String nomeUsuario = (String) session.getAttribute("usuarioautenticado");
 		
 		if(nomeUsuario == null){
 			

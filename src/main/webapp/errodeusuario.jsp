@@ -43,7 +43,7 @@
 
 
 	<div align="center">
-		<h2>ERRO EO LOGAR, USUARIO OU SENHAS INVALIDOS!!!</h2>
+		<h2>ERRO AO LOGAR, USUARIO OU SENHAS INVALIDOS!!!</h2>
 
 		<div id="cabecalho">cabecalho</div>
 

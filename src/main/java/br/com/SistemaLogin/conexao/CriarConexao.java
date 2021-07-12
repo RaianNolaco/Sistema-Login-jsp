@@ -1,10 +1,12 @@
 package br.com.SistemaLogin.conexao;
 
 import java.sql.DriverManager;
+import java.sql.SQLException;
+
 
 public class CriarConexao {
 	
-	public static connection getConexao() throws SQLExeption{
+	public static connection getConexao() throws SQLException{
 		
 		try {
 			
@@ -17,8 +19,14 @@ public class CriarConexao {
 			//driver de conexão:Banco de conexão://Local do banco/nome do banco,        user,   senha  
 			return DriverManager.getConnection("jdbc:mysql://localhost/SistemaLogin","root","testermn");
 			
-		} catch (ClassNotFoundException e) {
-			// TODO: handle exception
+		} catch (SQLException e) {
+
+			throw new SQLException(e);
+			
+		} catch (ClassNotFoundException e1) {
+
+			throw new SQLException(e1);
+			
 		}
 		
 	}

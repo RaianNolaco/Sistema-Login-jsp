@@ -42,16 +42,18 @@ public class LoginDAO {
 			stmt.setString(1, l.getNome_usuario());
 			stmt.setString(2, l.getSenha_usuario());
 			
+			//aqui execultamos tudo feito anteriormente e depois fechamos a conexão do stmt
 			stmt.execute();
 			stmt.close();
 
+		//tratamento de erros 	
 		}catch(SQLException e)
 		{
 
 			e.printStackTrace();
 
 		}finally{
-		
+		    // aqui a conexão com o banco de varivel con
 			con.close();
 		
 		}

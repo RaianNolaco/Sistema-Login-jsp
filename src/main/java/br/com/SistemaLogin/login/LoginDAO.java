@@ -29,7 +29,7 @@ public class LoginDAO {
 	public void adicionar(Login l) throws SQLException{
 		
 		// variavel sql recebe e comando para executar no banco de dados 
-		String sql = "INSERT INTO login (usuario,senha) valeu (?,?)";
+		String sql = "INSERT INTO login (nome_usuario,senha_usuario) values (?,?)";
 	
 
 		try{

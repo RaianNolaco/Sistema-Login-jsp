@@ -13,9 +13,9 @@ public class Main {
 		Connection con = CriarConexao.getConexao();
 		
 		Login l  =  new Login();
-		
-		l.setNome_usuario("Raian");
-		l.setSenha_usuario("123");
+			
+		l.setNome_usuario("Will");
+		l.setSenha_usuario("HIHI");
 		
 		LoginDAO dao = new LoginDAO(con);
 		dao.adicionar(l);

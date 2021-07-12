@@ -18,7 +18,7 @@ public class CriarConexao {
 			
 			
 			//driver de conexão:Banco de conexão://Local do banco/nome do banco,        user,   senha  
-			return DriverManager.getConnection("jdbc:mysql://localhost/SistemaLogin");
+			return DriverManager.getConnection("jdbc:mysql://localhost/SistemaLogin","root","testermn");
 			
 		} catch (SQLException e) {
 

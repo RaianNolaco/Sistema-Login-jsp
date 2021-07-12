@@ -8,6 +8,54 @@
 
 package br.com.SistemaLogin.login;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
 public class LoginDAO {
+
+	//Connection colocado na variavel con
+	private Connection con;
+
+	//metodo construtos dizendo que LoginDAO recebe a variavel de conexão con
+	public LoginDAO(Connection con) {
+
+		this.con = con;
+
+	}
+
+	
+	//função de adicionar um novo usuario 
+	public void adicionar(Login l) throws SQLException{
+		
+		// variavel sql recebe e comando para executar no banco de dados 
+		String sql = "INSERT INTO login (usuario,senha) valeu (?,?)";
+	
+
+		try{
+
+			/*essa viavel prepara o comando sql para ser execultado dentro do banco
+			ja preparando a conexão*/ 
+			PreparedStatement stmt = con.prepareStatement(sql);
+			
+			//aqui colocamos os parametros que irão ser colocanos no lugar dos "? ?" da variavel Sql
+			stmt.setString(1, l.getNome_usuario());
+			stmt.setString(2, l.getSenha_usuario());
+			
+			stmt.execute();
+			stmt.close();
+
+		}catch(SQLException e)
+		{
+
+			e.printStackTrace();
+
+		}finally{
+		
+			con.close();
+		
+		}
+	
+	}
 
 }

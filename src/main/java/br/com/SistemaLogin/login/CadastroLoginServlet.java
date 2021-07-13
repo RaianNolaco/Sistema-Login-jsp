@@ -2,6 +2,7 @@ package br.com.SistemaLogin.login;
 
 import java.io.IOException;
 import java.sql.Connection;
+import java.sql.SQLException;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -38,22 +39,27 @@ public class CadastroLoginServlet extends HttpServlet {
 		String usuario =  request.getParameter("txtUsuario");
 		String senha   =  request.getParameter("txtSenha"); 
 		
+		//variavel de conexão
 		Connection con;
 		
 		try {
-		
-			con = CriarConexao.getConexao();
+		    
+			 con = CriarConexao.getConexao();
+			 
+			 /*jogando os valores pegos nas variaves usuario e senha 
+			 * para classe login*/
 			 Login l = new Login();
 			 l.setNome_usuario(usuario);
-			 l.setSenha_usuario(usuario);
+			 l.setSenha_usuario(senha);
 			 
 			 LoginDAO dao = new LoginDAO(con);
 			 dao.adicionar(l);
+			 
+			 request.setAttribute("msg", "Cadastrado com sucesso!");
 			
-		} catch (Exception e) {
+		} catch (SQLException e) {
 			
-			
-		}finally {
+			e.printStackTrace();
 			
 		}
 		

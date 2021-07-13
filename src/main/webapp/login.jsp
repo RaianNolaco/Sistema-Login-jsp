@@ -33,8 +33,8 @@
 				<tr>
 
 
-					<td colspan="2" align="center"><input type="submit"
-						value="Logar" onclick="validarLogin()" /></td>
+					<td colspan="2" align="center"><input type="button"
+						value="Logar" onclick="validarCampo()" /></td>
 
 				</tr>
 

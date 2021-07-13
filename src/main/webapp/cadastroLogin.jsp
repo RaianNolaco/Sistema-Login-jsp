@@ -26,8 +26,8 @@
 
 
 
-				<td colspan="2" align="center"><input type="submit"
-					value="Cadastrar" onclick="validarLogin()" /></td>
+				<td colspan="2" align="center"><input type="button"
+					value="Cadastrar" onclick="validarCampo()" /></td>
 
 			</tr>
 

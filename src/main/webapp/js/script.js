@@ -1,4 +1,4 @@
-function validarLogin(){
+function validarCampo(){
 	
 	//Verificando se os campos de senha e usuario possuem alguma informação
 	if(document.formLogin.txtUsuario.value == "" || document.formLogin.txtSenha.value == ""){

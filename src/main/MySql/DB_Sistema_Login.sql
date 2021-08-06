@@ -1,4 +1,4 @@
- -- drop database SistemaLogin;
+-- drop database SistemaLogin;
 
 create database SistemaLogin;
 use SistemaLogin;
